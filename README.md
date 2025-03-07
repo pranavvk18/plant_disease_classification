@@ -1,4 +1,5 @@
-# Plant Disease Detection Project
+# Plant Disease Classification
+
 
 ## Introduction
 This project aims to develop a machine learning model for plant disease detection using image classification techniques. By leveraging deep learning, the model can identify various plant diseases from leaf images, helping farmers and agricultural experts take timely action.
