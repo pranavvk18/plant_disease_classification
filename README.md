@@ -1,23 +1,18 @@
-Plant Disease Detection Project
+# Plant Disease Detection Project
 
-Introduction
-
+## Introduction
 This project aims to develop a machine learning model for plant disease detection using image classification techniques. By leveraging deep learning, the model can identify various plant diseases from leaf images, helping farmers and agricultural experts take timely action.
 
-Dataset
+## Dataset
+We use the **New Plant Diseases Dataset** sourced from Kaggle, which consists of labeled images of healthy and diseased plants.
+* **Source:** Kaggle - New Plant Diseases Dataset
+* **Categories:** Healthy and Diseased plants
+* **Format:** JPEG images
 
-We use the New Plant Diseases Dataset sourced from Kaggle, which consists of labeled images of healthy and diseased plants.
-
-Source: Kaggle - New Plant Diseases Dataset
-
-Categories: Healthy and Diseased plants
-
-Format: JPEG images
-
-Dataset Structure
-
+## Dataset Structure
 The dataset is structured into training and validation sets:
 
+```
 ├── train
 │   ├── Class1
 │   │   ├── image1.jpg
@@ -27,27 +22,25 @@ The dataset is structured into training and validation sets:
 ├── validation
 │   ├── Class1
 │   ├── Class2
+```
 
-Project Setup
-
-Requirements
-
+## Project Setup
+### Requirements
 To run this project, install the following dependencies:
 
+```
 pip install tensorflow keras opencv-python numpy matplotlib
+```
 
-Training the Model
+## Training the Model
+1. **Download the dataset** from Kaggle and extract it.
+2. **Preprocess the images** (resizing, normalization, augmentation if needed).
+3. **Load the dataset** using TensorFlow or PyTorch.
+4. **Train a classification model** using CNNs or Transfer Learning.
 
-Download the dataset from Kaggle and extract it.
+### Example Code (Loading Dataset in Python)
 
-Preprocess the images (resizing, normalization, augmentation if needed).
-
-Load the dataset using TensorFlow or PyTorch.
-
-Train a classification model using CNNs or Transfer Learning.
-
-Example Code (Loading Dataset in Python)
-
+```python
 import tensorflow as tf
 from tensorflow.keras.preprocessing.image import ImageDataGenerator
 
@@ -68,11 +61,12 @@ validation_generator = validation_datagen.flow_from_directory(
     batch_size=32,
     class_mode='categorical'
 )
+```
 
-Applications
+## Applications
+* Automated plant disease detection
+* Agricultural health monitoring
+* Precision farming using AI
 
-Automated plant disease detection
-
-Agricultural health monitoring
-
-Precision farming using AI
+## Contributing
+Feel free to contribute to this project by improving the model, optimizing performance, or expanding the dataset.
